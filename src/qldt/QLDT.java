@@ -67,7 +67,7 @@ public class QLDT {
 		
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/QLDT?characterEncoding=utf-8&allowLoadLocalInfile=true","root","akaichi");
+		connection = DriverManager.getConnection("host:port","name","password");
 		stmt = connection.createStatement();
 		new LoginUI().setVisible(true);
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
